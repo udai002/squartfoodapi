@@ -98,6 +98,7 @@ This is a user api to get all users
 | `id` | `string` | **Unique** |
 | `price` | `number` | **Required**. |
 | `category` | `string` | **optional**. |
+| `product-image` | `file` | **Required**. |
 
 
 #### Get all products
@@ -118,7 +119,6 @@ This is a user api to get all users
 | `id` | `string` | **Unique** |
 
 
-### Request 
 ```bash
 {
     "name":"Dum Biriyani  ",
@@ -137,5 +137,5 @@ This is a user api to get all users
 | :-------- | :------- | :------------------------- |
 | `id` | `string` | **Unique** |
 
-Takes two numbers and returns the sum.
+
 
