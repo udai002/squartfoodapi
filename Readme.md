@@ -84,3 +84,58 @@ This is a user api to get all users
 | headers | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `authorization` | `string` | **Required**. Your API key |
+
+#### Add Product 
+
+```http
+  POST /api/product/addProduct
+```
+### Request 
+
+| form data | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `name` | `string` | **Required**. |
+| `id` | `string` | **Unique** |
+| `price` | `number` | **Required**. |
+| `category` | `string` | **optional**. |
+
+
+#### Get all products
+
+```http
+  GET /api/products
+```
+
+#### Edit product
+
+```http
+  PUT /api/products/editProduct/${id}
+```
+
+### Request 
+| parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `string` | **Unique** |
+
+
+### Request 
+```bash
+{
+    "name":"Dum Biriyani  ",
+    "price":200,
+    "category":"Biriyani"
+}
+```
+#### delete product 
+
+```http
+  DELETE /api/products/deleteProduct/${id}
+```
+### Request 
+
+| parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `string` | **Unique** |
+
+Takes two numbers and returns the sum.
+
