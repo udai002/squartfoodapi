@@ -138,4 +138,57 @@ This is a user api to get all users
 | `id` | `string` | **Unique** |
 
 
+## API Reference
+
+#### Create orders
+
+```http
+  POST /api/orders/addOrder
+```
+
+### Response
+
+| Headers | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `authorization` | `string` | **Required**.|
+
+```
+{
+    "productId":"asjkdfhaljdhf",
+    "quantity":1
+}
+
+```
+#### Get all orders
+
+```http
+  GET /api/orders
+```
+
+#### Get order of specific user
+
+```http
+  GET /api/orders
+```
+
+| Headers | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `authorization`      | `string` | **Required**. |
+
+
+
+```http
+  DELETE /api/orders/{id}
+```
+```
+id - orderId that you want to delete only user who made the order and admin can delete the order
+```
+
+| Headers | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `authorization`      | `string` | **Required**. |
+
+#### add(num1, num2)
+
+Takes two numbers and returns the sum.
 
