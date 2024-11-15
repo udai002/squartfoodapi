@@ -19,7 +19,7 @@ router.get('/' , async (req , res)=>{
 
 //creating orders
 router.post('/addOrder' , async (req ,res)=>{
-    const {productId , quantity , tableNo} = req.body 
+    const {productId , quantity , tableNo, price} = req.body 
     const token = req.headers['authorization'].split(" ")[1]
     const user = jwt.verify(token , jwt_secret)
     const {userId} = user
@@ -31,7 +31,7 @@ router.post('/addOrder' , async (req ,res)=>{
     }
 
     try{
-        const orderDetails = await orders.create({id:orderId , quantity, orderAt , productId , userId , status , tableNo})
+        const orderDetails = await orders.create({id:orderId , quantity, orderAt , productId , userId , status , tableNo , price})
         console.log(orderDetails)
         return res.status(200).send({order:orderDetails , status:true })
     }catch(e){

@@ -28,6 +28,10 @@ const orderSchema = new mongoose.Schema({
     tableNo:{
         type:Number,
         Default:1,
+    },
+    price:{
+        type:Number,
+        required:true
     }
 })
 
